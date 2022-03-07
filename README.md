@@ -2,6 +2,8 @@
 
 I'm Georgina Dibua, a Mechanical Engineering PhD student at the Unversity of Texas at Austin working on modelling and simulating the sintering of nanoparticles for a microscale 3D printing process. This repo contains some sample scripts for projects that I've worked on related to my PhD. Thank you for checking this page out and I hope you enjoy your visit :smile:
 
+
+
 ## Background
 The codebase I developed for modelling the sintering process is not open source (at least not yet) so I can't share that here, but I've included some videos showing the final results of the simulation process to serve as a bit of background and to provide context for the projects shown in this repository. 
 
@@ -17,9 +19,11 @@ The resulting bed created from the bed generation simulation is passed on to the
 https://user-images.githubusercontent.com/42850648/156988896-b72751b4-f1eb-4913-bb1e-d6f42308be0a.mp4
 
 
+
+
 ## Sample Scripts
 
-### 1. convertImagetoTemp.py
+### 1. 2D_image_extrusion/convertImagetoTemp.py
 
 The function of this script is to convert a 2D image file into a 3D temperature map that can be inserted into the sintering simulation shown above to selectively sinter specific areas of the simulation bed. This has applications in the actual process being simulated. The video above shows a sintering process where the entire bed is being sintered at the same rate, but in the actual process, due to selective heat deposition which drives the sintering of the particles, the rate of sintering in the actual bed is not homogenous. To simulate this process, binary files containing the desired temperature map for the simulation bed are passed in as inputs to control the rate of sintering of different areas of the bed. This script accepts any type of image file, converts the colors into a temperature map, extrudes this from 2D to 3D, then rotates the image so it is in the desired configuration for the sintering simulation bed. The results from running this script are shown in the Figure below.
 
@@ -33,17 +37,17 @@ When the resulting temperature map is applied to a simulation bed the result is 
 ![image](https://user-images.githubusercontent.com/42850648/156985802-b968772e-3f6a-4d7d-ba20-47bf7de07be3.png)
 
 
-### 2. visualizeNeckConnections.py
+### 2. visualizing_resistance_network/visualizeNeckConnections.py
 
 The function of this script is to visualize the connections in an interconnected network of resistors present in an electronics circuit. This has applications in the post-process analysis that is done on the sintered simulation beds. It is necessary to be able to get numerical data from the simulations to be able to validate the simulation against experimental data. One such property measured is the electrical resistance predicted by the simulation. This is done by treating each particle in the system as a node connected to other particles through resistors with resistance values that are a function of the necks connecting particles. This results in a circuit file (nodefile.cir) which contains a list of the nodes in the bed, and the resistance between these nodes. Being able to visualize these connections is a very important debugging tool. Example results from this script are shown in Figures a and b below for two different input nodefiles. 
 
 
-![ResistanceNetworkPlotOf_nodeFile1](https://user-images.githubusercontent.com/42850648/156988120-961db780-6332-4421-9139-faf2c9d4f081.jpg)
 Figure a
+![ResistanceNetworkPlotOf_nodeFile1](https://user-images.githubusercontent.com/42850648/156988120-961db780-6332-4421-9139-faf2c9d4f081.jpg)
 
 
-![ResistanceNetworkPlotOf_nodeFile2](https://user-images.githubusercontent.com/42850648/156988205-7f77c9ff-3538-4d09-ad82-f7a90d6c8eb0.jpg)
 Figure b
+![ResistanceNetworkPlotOf_nodeFile2](https://user-images.githubusercontent.com/42850648/156988205-7f77c9ff-3538-4d09-ad82-f7a90d6c8eb0.jpg)
 
 
 In these figures, the potential difference is applied to nodes 0 and 1. It was clear from looking at the figures that there was something wrong with the connections in Figure b, just based of being able to see what the connections between the nodes looked like. 
