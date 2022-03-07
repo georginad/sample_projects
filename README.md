@@ -50,4 +50,4 @@ Figure b
 ![ResistanceNetworkPlotOf_nodeFile2](https://user-images.githubusercontent.com/42850648/156988205-7f77c9ff-3538-4d09-ad82-f7a90d6c8eb0.jpg)
 
 
-In these figures, the potential difference is applied to nodes 0 and 1. It was clear from looking at the figures that there was something wrong with the connections in Figure b, just based of being able to see what the connections between the nodes looked like. 
+In these figures, the potential difference is applied to nodes 0 and 1. It was clear from looking at the figures that there was something wrong with the connections in Figure b, just based off being able to see what the connections between the nodes looked like. 
