@@ -8,13 +8,13 @@ The codebase I developed for modelling the sintering process is not open source 
 The sintering simulation is broken up into two main processes. The first is a **bed generation** phase, where nanoparticles are allowed to interact in a simulation box till a steady state bed configuration is reached. This is performed in a Discrete Element Model (DEM) simulation I built in C++. The bed generation process is shown in the video below. The particles move around subject to elastic, dissipative, gravitational and cohesive forces, until the particles settle. 
 
 
-https://user-images.githubusercontent.com/42850648/156982342-8edf14d0-c2f0-4613-ada5-d54dad98435a.mp4
+https://user-images.githubusercontent.com/42850648/156988966-59bf3cf6-77a5-4b1e-92ad-7fb2b03c2673.mp4
 
 
 The resulting bed created from the bed generation simulation is passed on to the second main process which is the actual **sintering simulation** phase. The sintering simulation is based off a Phase Field Model of solid-state diffusion between nanoparticles. This is a parallel simulation I developed in C++ and is run with the supercomputer at the Texas Advanced Computing Center. This simulation was created from discretized partial differential equations integrated numerically using Euler's method. An example of the results of the sintering simulation applied to a simulated bed is shown in the video below.
 
 
-https://user-images.githubusercontent.com/42850648/156984299-0258de06-1cd7-4d35-9e07-23d7e6efda54.mp4
+https://user-images.githubusercontent.com/42850648/156988896-b72751b4-f1eb-4913-bb1e-d6f42308be0a.mp4
 
 
 ## Sample Scripts
