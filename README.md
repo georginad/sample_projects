@@ -34,7 +34,7 @@ The function of this script is to convert a 2D image file into a 3D temperature 
 When the resulting temperature map is applied to a simulation bed the result is a selectively sintered area as shown below.
 
 
-![sinteredUTLogo](https://user-images.githubusercontent.com/42850648/156993360-da629b7b-a340-48dd-abac-578b5029b339.jpg)
+![sinteredUTLogo](https://user-images.githubusercontent.com/42850648/156993570-36032ebf-47a0-4393-8d96-3803c11b7a45.jpg)
 
 
 ### 2. visualizing_resistance_network/visualizeNeckConnections.py
